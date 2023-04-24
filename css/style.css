@@ -269,7 +269,6 @@ body {
 
 .logo {
   font-weight: 700;
-  font-size: 1.125rem;
 }
 
 .header {
@@ -622,6 +621,7 @@ body {
 .spollers__title {
   font-weight: 500;
   color: #6f5a6b;
+  padding-right: 2.1875rem;
 }
 
 .spollers__date {
@@ -678,12 +678,6 @@ body {
   }
 }
 
-@media (min-width: 62.5em) {
-  .menu__link {
-    font-size: 1rem;
-  }
-}
-
 @media (min-width: 92.5em) {
   .title {
     font-size: 1.75rem;
@@ -691,6 +685,10 @@ body {
 
   .label {
     font-size: 1.75rem;
+  }
+
+  .logo {
+    font-size: 1.125rem;
   }
 
   .page__main {
@@ -716,6 +714,10 @@ body {
   .diploms__container {
     gap: 2.5rem;
   }
+
+  .spollers__title {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 20em) {
@@ -725,6 +727,10 @@ body {
 
   .label {
     font-size: 1.25rem;
+  }
+
+  .logo {
+    font-size: 1rem;
   }
 
   .page__main {
@@ -749,6 +755,10 @@ body {
 
   .diploms__container {
     gap: 0.625rem;
+  }
+
+  .spollers__title {
+    font-size: 0.875rem;
   }
 }
 
@@ -915,12 +925,6 @@ body {
   }
 }
 
-@media (max-width: 56.25em) {
-  .menu__link {
-    font-size: 0.9375rem;
-  }
-}
-
 @media (max-width: 47.99875em) {
   .diploms__image img {
     max-width: 100%;
@@ -958,6 +962,20 @@ body {
     .label {
       font-size: calc(
 				1.25rem + 0.5 * (100vw - 20rem) / 72.5
+			);
+    }
+}
+
+@supports (font-size: clamp( 1rem , 0.9655172414rem  +  0.1724137931vw , 1.125rem )) {
+    .logo {
+      font-size: clamp( 1rem , 0.9655172414rem  +  0.1724137931vw , 1.125rem );
+    }
+}
+
+@supports not (font-size: clamp( 1rem , 0.9655172414rem  +  0.1724137931vw , 1.125rem )) {
+    .logo {
+      font-size: calc(
+				1rem + 0.125 * (100vw - 20rem) / 72.5
 			);
     }
 }
@@ -1045,6 +1063,20 @@ body {
 			);
     }
 }
+
+@supports (font-size: clamp( 0.875rem , 0.8405172414rem  +  0.1724137931vw , 1rem )) {
+    .spollers__title {
+      font-size: clamp( 0.875rem , 0.8405172414rem  +  0.1724137931vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.8405172414rem  +  0.1724137931vw , 1rem )) {
+    .spollers__title {
+      font-size: calc(
+				0.875rem + 0.125 * (100vw - 20rem) / 72.5
+			);
+    }
+}
 }
 
 @media (min-width: 61.99875em) and (min-width: 47.99875em) and (max-width: 62.5em) {
@@ -1063,17 +1095,17 @@ body {
 }
 }
 
-@media (min-width: 56.25em) and (max-width: 62.5em) {
-@supports (font-size: clamp( 0.9375rem , 0.375rem  +  1vw , 1rem )) {
+@media (min-width: 61.9375em) and (max-width: 62.5em) {
+@supports (font-size: clamp( 0.9375rem , -5.9444444444rem  +  11.1111111111vw , 1rem )) {
     .menu__link {
-      font-size: clamp( 0.9375rem , 0.375rem  +  1vw , 1rem );
+      font-size: clamp( 0.9375rem , -5.9444444444rem  +  11.1111111111vw , 1rem );
     }
 }
 
-@supports not (font-size: clamp( 0.9375rem , 0.375rem  +  1vw , 1rem )) {
+@supports not (font-size: clamp( 0.9375rem , -5.9444444444rem  +  11.1111111111vw , 1rem )) {
     .menu__link {
       font-size: calc(
-				0.9375rem + 0.0625 * (100vw - 56.25rem) / 6.25
+				0.9375rem + 0.0625 * (100vw - 61.9375rem) / 0.5625
 			);
     }
 }
